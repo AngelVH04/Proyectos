@@ -2,7 +2,6 @@ import tkinter as tk
 from tkinter import ttk
 import random
 
-# 1. Definir los textos
 TEXTOS = [
     "Piedra",
     "Papel",
@@ -26,22 +25,11 @@ def obtener_texto_aleatorio():
         resultado.config(text="¡Ganaste! ")
     else:
         resultado.config(text="Perdiste")
-            
-        
-    
-    
-        
 
-# --- 2. Configuración de la Interfaz Gráfica (Tkinter) ---
-
-# Crear la ventana principal
 ventana = tk.Tk()
 
 ventana.title("Generador de Texto Aleatorio")
 
-
-# Etiqueta para mostrar el resultado
-# Inicialmente mostrará un mensaje de bienvenida
 etiqueta_resultado = tk.Label(
     ventana, 
     text="Selecciona una opción", 
@@ -73,18 +61,16 @@ resultado = tk.Label(
 )
 resultado.pack()
 
-# Botón que llama a la función `obtener_texto_aleatorio` al ser presionado
 boton_generar = tk.Button(
     ventana, 
     text="Presiona para jugar", 
     command=obtener_texto_aleatorio, 
     font=("Arial", 12), 
-    bg="lightblue", # Color de fondo del botón
-    fg="black",     # Color del texto
+    bg="lightblue", 
+    fg="black",    
     padx=10, 
     pady=5
 )
 boton_generar.pack(pady=10)
 
-# Iniciar el bucle principal de la aplicación
 ventana.mainloop()
